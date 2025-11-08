@@ -1,0 +1,7 @@
+web: gunicorn app:app --timeout 120 --workers 2
+
+
+#Reason:
+
+# Prevents 502 from idle timeouts.
+# Adds concurrency for handling simultaneous requests.
