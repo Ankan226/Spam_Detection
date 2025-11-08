@@ -1,7 +1,0 @@
-nltk
-scikit-learn
-Flask
-Flask-Cors
-pandas
-numpy
-gunicorn
