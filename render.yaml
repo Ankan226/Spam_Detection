@@ -1,0 +1,14 @@
+#If you want Render to auto-deploy perfectly each time, add this file:
+
+
+
+services:
+  - type: web
+    name: spam-detection
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --timeout 120 --workers 2
+    envVars:
+      - key: PORT
+        value: 10000
